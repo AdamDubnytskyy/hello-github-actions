@@ -13,5 +13,5 @@ runs:
   image: Dockerfile
 
 branding:
-  icon: "mic"
-  color: "purple"
+  icon: "cloud-snow"
+  color: "yellow"
