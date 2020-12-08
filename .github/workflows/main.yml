@@ -1,11 +1,13 @@
-name: A workflow for my Hello World file
+name: Check Stuff links
 on: push
 jobs:
-  build:
-    name: Hello world action
+  markdown-link-check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: ./action-a
+      - uses: actions/checkout@master
+      - uses: gaurav-nelson/github-action-markdown-link-check@v1
         with:
-          MY_NAME: "Mona"
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'yes'
+          config-file: 'mlc_config.json'
+          file-path: './STUFF.md'
